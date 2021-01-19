@@ -29,6 +29,12 @@ namespace RPSLS
 
         //member methods
 
+        public void StartGame()
+        {
+
+
+        }
+
 
         public void ChooseGameType()
         {
@@ -49,9 +55,9 @@ namespace RPSLS
                 playerTwo = new Computer();
             }
         }
-            
-         public void ChooseGesture()  //COMPARE GESTURES AND GIVE A POINT TO THE WINNER
-                {
+
+        public void ChooseGesture()  //COMPARE GESTURES AND GIVE A POINT TO THE WINNER
+        {
             if   gestures.playerOne == "rock" && gestures.playerTwo == "paper")
             {
                 Console.WriteLine(" Paper covers Rock!");
@@ -199,12 +205,33 @@ namespace RPSLS
             {
                 Console.WriteLine("You chose the same item as the other player. Pick again!");
             }
-           
         }
-    }
+        public void DisplayWinner()
 
-    
+        {
+            {
+                if (playerOneScore < 2 && playerTwoScore < 2)
+                {
+                    StartGame();
+                }
+
+                else if
+                    (playerOneScore == 2)
+                {
+                    Console.WriteLine("Player one wins!");
+                }
+
+                else if
+                    (playerTwoScore == 2)
+                {
+                    Console.WriteLine("Player two wins!");
+                }
+
+            
+        }
 }
+    
+
 
     
 
