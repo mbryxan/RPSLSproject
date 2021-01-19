@@ -13,6 +13,9 @@ namespace RPSLS
     public abstract class Player
     {
         //member variables- HAS
+
+        //public Player playerOne;
+        //public Player playerTwo;
         public string name;
         public List<Gesture> gestures;
         

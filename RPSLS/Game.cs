@@ -8,151 +8,159 @@ namespace RPSLS
 {
     class Game
     {
-        //member variables (each game has a...)
+            //member variables (each game needs two players and a score for them)
+
         public Player playerOne;
         public Player playerTwo;
-        public Player playerThree;
         public int playerOneScore;
         public int playerTwoScore;
-        //
-        
-        //member constructor
-        public Game ()
-        {
-           playerOne = new Human();
-           playerTwo = new Human();
-           playerThree = new Computer();
-           playerOneScore = 0;
-           playerTwoScore = 0;
-           
+        public bool humansOnlyGame;
+
+        //member constructor (each new game needs a two entirely new players and scores set to 0)
+
+        public Game()
+
+            
+        {      
+            playerOneScore = 0;
+            playerTwoScore = 0;
+            humansOnlyGame = true;
         }
 
-        //member methods
+                //member methods
 
-        public void StartGame()
+                //Two player game
+
+       
+
+       
+
+                 //single player
+                 
+                //member methods
+
+        public void ChooseGameType()
         {
-           // DISPLAY RULES AND DETERMINE GAME TYPE
+            // DISPLAY RULES 
 
-            Console.WriteLine("Welcome to RPSLS. You will choose an object and battle with another player or the computer. Do you want to play against another player? Type yes, otherwise no will pit you against the computer.");
-            string input = Console.ReadLine();
-            if (input = "yes")
+            Console.WriteLine("Welcome to RPSLS. Choose an object and battle with another player or the computer. If you want to play against another player type yes otherwise no and you'll face the computer.");
+            string result = Console.ReadLine();
+            if (Console.ReadLine == bool)
             {
-                playerOne = new Human;
-                playerTwo = new Human;
-            }
-            else if (input = "no")
-            {
-                playerOne = new Human;
-                playerThree = new Computer;
+                playerOne = new Human();
+                playerTwo = new Human();
             }
 
-            // PLAYER ONE CHOOSES INPUT
-                 ChooseGesture();
+            else
+            {
+                playerOne = new Human();
+                playerTwo = new Computer();
+            }
+        
+      //      else if (input = "no")
+       //     {
+        //        playerOne = new Human;
+       //         playerThree = new Computer;
+        //    }
 
-            // PLAYER TWO CHOOSES INPUT
-                ChooseGesture();
+        //    /
+        //        ChooseGesture();
+
+        //    /
+       //         ChooseGesture();
 
 
             //COMPARE GESTURES AND GIVE A POINT TO THE WINNER
-            if (  == rock &&  == scissors)
+            if (  == "rock" &&  gestures.playerTwo == "scissors")
             {
                 Console.WriteLine(" Rock crushes Scissors!");
                 playerOneScore++;
             }
 
-            else if ( == Rock &&  == Scissors)
+            else if (playerOne  == rock && playerTwo == Scissors)
             {
                 Console.WriteLine(" Rock crushes Scissors!");
                 playerOneScore++;
             }
 
-            else if ( == Scissors &&  == Paper)
+            else if (playerOne == Scissors && playerTwo == Paper)
             {
                 Console.WriteLine("Scissors cuts Paper!");
                 playerOneScore++;
             }
             
-            else if ( == Paper &&  == Rock)
+            else if (playerOne  == Paper && playerTwo == Rock)
             {
                 Console.WriteLine("Paper covers Rock!");
                 playerOneScore++;
             }
 
-            else if ( == Rock && == Lizard)
+            else if (playerOne == Rock && playerTwo == Lizard)
             {
                 Console.WriteLine("Rock covers Lizard!");
                 playerOneScore++;
             }
 
-            else if (  == Lizard &&  == Spock)
+            else if (playerOne == Lizard && playerTwo == Spock)
             {
                 Console.WriteLine("Lizard poisons Spock!");
                 playerOneScore++;
             }
 
-            else if ( == Spock &&  == Scissors)
+            else if (playerOne == Spock && playerTwo == Scissors)
             {
                 Console.WriteLine(("Spock smashes Scissors!");
                 playerOneScore++;
             }
 
-            else if ( == Spock &&  == Scissors)
+            else if (playerOne == Spock && playerTwo == Scissors)
             {    
                 Console.WriteLine ("Spock smashes Scissors!");
                 playerOneScore++;
             }
 
-            else if ( == Scissors &&  == Lizard)
+            else if (playerOne == Scissors && playerTwo == Lizard)
                 Console.WriteLine ("Scissors decapitates Lizard");
                 playerOneScore++;
 
-             else if (  == Lizard &&  input  == Paper)
+             else if (playerOne == Lizard && playerTwo input  == Paper)
              {
                  Console.WriteLine ("Paper disproves Spock"); 
                  playerOneScore++;
              }
 
-            else if ( == Spock &&  == Rock)
+            else if (playerOne == Spock && playerTwo == Rock)
             {
                   Console.WriteLine ("Spock vaporizes Rock!");
                   playerOneScore++;
             }
 
-            else if (  == Rock && == Rock)
+            else if (playerOne == Rock && == playerTwo Rock)
                 {
                     Console.WriteLine("You chose the same item as the other player. Pick again!");
                 }
 
-            else if (== Paper && == Paper)
+            else if (playerOne == Paper && == playerTwo Paper)
                 {
                 Console.WriteLine("You chose the same item as the other player. Pick again!)";
                 }
                    
-            else if (input player x == Scissors && input player y == Scissors)
+            else if (playerOne == Scissors && playerTwo == Scissors)
                 {
                     Console.WriteLine("You chose the same item as the other player. Pick again!");
             }
-            //      input player x == Scissors && input player y == Scissors
-            //      Console.WriteLine ("You chose the same item as the other player. Pick again!"
-
-
-            //else if 
-
-            //      input player x == Lizard && input player y == Lizard
-            //      Console.WriteLine ("You chose the same item as the other player. Pick again!"
-
-            //else if 
-
-            //      input player x == Spock && input player y == Spock
-            //      Console.WriteLine ("You chose the same item as the other player. Pick again!"
+          
+            else if (playerOne == Lizard && playerTwo == Lizard)
+                {
+                Console.WriteLine("You chose the same item as the other player. Pick again!");
+                }
+             else if (playerOne == Spock && playerTwo == Spock)
+                Console.WriteLine("You chose the same item as the other player. Pick again!");
+           
         }
-
     }
 
-    //WHEN ONE PLAYER GETS TO 2 THE GAME IS OVER
-
-
-
+    //WHEN ONE PLAYER GETS TO 2 THE GAME IS OVER             
 
 
     //   else if (playerTwoInput == C)

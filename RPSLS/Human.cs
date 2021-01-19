@@ -11,7 +11,7 @@ namespace RPSLS
 
         //member variables
 
-        //public Human human;
+        
 
 
         //member constructor
